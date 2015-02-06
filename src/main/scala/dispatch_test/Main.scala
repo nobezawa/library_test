@@ -9,12 +9,7 @@ import dispatch.Defaults._
 object Main extends App{
 
   val svc = url("https://www.google.co.jp/")
-  val request = Http(svc OK as.String)
-  for (c <- request){
-    println(c)
-  }
-
-
+  println(Http(svc OK as.String).apply())
 
 
 
